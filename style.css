@@ -318,6 +318,23 @@ body.page-id-21 .container-wrap {
 	padding: 0;
 }
 
+body.page-id-21 .container-wrap .portfolio-filters-inline ul li {
+	text-transform: uppercase;
+}
+
+
+body.page-id-21 .container-wrap .portfolio-items {
+	max-height: 320px;
+	overflow: hidden;
+} 
+body.page-id-21 .container-wrap .portfolio-items .col.span_3:not(.destacados):nth-child(5):last-child {
+	display: none;
+}
+
+body.page-id-21 #ai1ec-container {
+	margin-bottom: 4rem;
+}
+
 body.page-id-21 .timely .ai1ec-calendar-title,
 body.page-id-21 .ai1ec-agenda-buttons,
 body.page-id-21 .ai1ec-agenda-view .ai1ec-date .ai1ec-date-events .ai1ec-event-header .ai1ec-event-time,
