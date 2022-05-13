@@ -65,54 +65,110 @@ body #header-space {
 }
 
 /* footer */
-#footer-outer {display: none;}
-#footer {
-    padding: 0!important;
-    position: fixed;
-    bottom: 0;
-    z-index: 99999;
-    width: 100vw;
-    max-width: auto;
-    /*outline: 5px solid magenta;*/
+
+#footer-outer {
+	color: #fff;
+	position: fixed;
+	bottom: 0;
+	width: 100vw;
+	background-color: transparent;
+	pointer-events: auto;
+	cursor: pointer;
+	height: 65px;
 }
 
-#footer * {
-    padding: 0!important;
-    margin: 0!important;
+body.page-id-19 #footer-outer,
+body.page-id-21 #footer-outer,
+body.page-id-24 #footer-outer {
+	background: linear-gradient(0deg, rgba(255,255,255,1), 70%,  rgba(255,255,255,.3),  rgba(255,255,255,0));
 }
 
-#footer #redes .wpb_wrapper {
-    width: 350px;
+#footer-outer #footer-widgets .container,
+#footer-outer #footer-widgets .container .row {
+	padding: 0;
+}
+
+#footer-outer #redes {
+    width: 100%;
+    width: 300px;
+	height: 40px;
+	display: block;
+	overflow: hidden;
     margin: 0 auto!important;
+	padding: 0;
 }
 
-#footer #redes .wpb_wrapper .nectar_icon_wrap,
-#footer #redes .wpb_wrapper .vc_custom_heading {
+#footer-outer #redes .nectar_icon_wrap,
+#footer-outer #redes p {
     float: left;
-    margin: 0 2%!important;
+	display: inline-block;
+    margin: 0 2px!important;
+	padding: 0;
+	width: auto;
+}
+
+#footer-outer #redes p {
+    line-height: 40px;
+}
+
+#footer-outer #redes .nectar_icon_wrap {
+	width: 40px;
+}
+
+#footer-outer #redes .nectar_icon_wrap .nectar_icon::before {
+	opacity: 0;
+	-webkit-transition: opacity .5s ease-in;
+	-moz-transition: opacity .5s ease-in;
+	-o-transition: opacity .5s ease-in;
+	transition: opacity .5s ease-in;
 }
 
 
-#footer #redes .wpb_wrapper .nectar_icon_wrap .nectar_icon .im-icon-wrap,
-#footer #redes .wpb_wrapper .nectar_icon_wrap .nectar_icon .im-icon-wrap svg {
+#footer-outer #redes .nectar_icon_wrap .nectar_icon {
+	margin: 0!important;
+	padding: 10px!important;
+}
+
+#footer-outer #redes .nectar_icon_wrap .nectar_icon .im-icon-wrap,
+#footer-outer #redes .nectar_icon_wrap .nectar_icon .im-icon-wrap svg {
     padding: 0!important;
     height: 20px !important;
     width: 20px !important;
-	-webkit-transition: height .5s ease-in;
-	-moz-transition: height .5s ease-in;
-	-o-transition: height .5s ease-in;
-	transition: height .5s ease-in;
 }
 
-#footer #redes .wpb_wrapper .nectar_icon_wrap .nectar_icon:hover .im-icon-wrap,
-#footer #redes .wpb_wrapper .nectar_icon_wrap .nectar_icon:hover .im-icon-wrap svg {
-   height: 40px!important;
-   width: 40px!important;
+
+#footer-outer #redes .nectar_icon_wrap .nectar_icon:hover:before {
+	opacity: .2;
+}
+/*
+body.page-id-19 #footer-outer #redes .nectar_icon_wrap .nectar_icon::before {
+	opacity: .3;
+	background-color: #000;
+}
+body.page-id-19 #footer-outer #redes .nectar_icon_wrap .nectar_icon:hover:before {
+	opacity: .3;
+}
+*/
+#footer-outer #redes p,
+#footer-outer p.copy {
+    font-size: 70%;
+    text-shadow: 0px 2px 5px rgba(0,0,0,0.8);
 }
 
-#footer #redes .wpb_wrapper .vc_custom_heading,
-#footer .wpb_text_column {
-    font-size: 80%;
+body.page-id-19 #footer-outer #redes p,
+body.page-id-19 #footer-outer p.copy,
+body.page-id-21 #footer-outer #redes p,
+body.page-id-21 #footer-outer p.copy,
+body.page-id-24 #footer-outer #redes p,
+body.page-id-24 #footer-outer p.copy {
+	color: #333;
+    text-shadow: 0px 2px 5px rgba(0,0,0,0);
+}
+
+#footer-outer p.copy {
+    font-size: 90%;
+	line-height: 20px;
+	height: 20px;
     text-shadow: 0px 2px 5px rgba(0,0,0,0.8);
 }
 
@@ -252,11 +308,11 @@ body.page-id-21 .portfolio-wrap .portfolio-items .work-item .work-info .vert-cen
 }
  
 
-/*
-	====================================================
-	= Agenda | Nou Tapinería All-in-One Event Calendar 1.0 =
-	====================================================
- */
+/*******************************************************************************************************
+========================================================================================================
+  Agenda | Nou Tapinería All-in-One Event Calendar 1.0
+========================================================================================================
+********************************************************************************************************/
 
 body.page-id-21 .container-wrap {
 	padding: 0;
@@ -339,12 +395,16 @@ body.page-id-21 .ai1ec-agenda-view .ai1ec-date {
 	border: none;
 	min-height: 85px;
 	border: 0.025pt solid #999;
+	border: 0.025pt solid #eee;
 	background-color: #eee;
 	background-color: #f9f9f9;
+	background-color: transparent;
 }
 
 body.page-id-21 .ai1ec-agenda-view .ai1ec-date:hover {
 	background-color: #f0f4fa;
+	border: 0.025pt solid #ccc;
+	background-color: #f9f9f9;
 }
 
 
@@ -476,4 +536,107 @@ body.page-id-21 .ai1ec-subscribe-container,
 body.page-id-21 .ai1ec-pull-left,
 body.page-id-21 .ai1ec-agenda-view .ai1ec-date .ai1ec-event-summary .ai1ec-event-summary-footer {
    display: none;
+}
+
+/*******************************************************************************************************
+========================================================================================================
+  Contacto | Nou Tapinería
+========================================================================================================
+********************************************************************************************************/
+
+body.page-id-24 #como-llegar {
+	height: auto;
+}
+
+/* tabs*/
+body.page-id-24 .tabbed > ul.wpb_tabs_nav  li:last-child {
+	width: calc(100% - 90px);
+}
+
+body.page-id-24 .tabbed > ul.wpb_tabs_nav  li a {
+	background-color: #fff;
+	border-color: #fff;
+}
+
+body.page-id-24 .tabbed ul.wpb_tabs_nav li:first-child a,
+body.page-id-24 .tabbed ul.wpb_tabs_nav li:first-child a.active-tab {
+	background-color: #fff !important;
+	border-color: #fff !important;
+	color: #fff !important;
+}
+
+body.page-id-24 .tabbed ul.wpb_tabs_nav li:first-child a:not(.active-tab) {
+	background-color: rgba(255,0,0,0) !important;
+	position: fixed;
+	z-index: 105;
+	width: 100vw;
+	display: block;
+	height: 60vh;
+	bottom: 0;
+	left: 0;
+}
+
+body.page-id-24 div[id^="tab-"],
+body.page-id-24 #tab-tab.visible-tab {
+	height: 80vh;
+}
+
+body.page-id-24 #tab-tab.visible-tab #mapa {
+	height: 400px;
+}
+
+
+body.page-id-24 #tab-que-te-interesa-hacer-en-mercado-de-tapineria.visible-tab {
+	height: 100px !important;
+}
+
+body.page-id-24 #tab-que-te-interesa-hacer-en-mercado-de-tapineria.visible-tab .divider {
+	width: 100vw;
+	position: absolute;
+	z-index: 101;
+	background-color: rgba(255,255,255,.6);
+	margin-left: -29vw;
+	/*height: 600px !important;*/
+}
+
+/* buses */
+body.page-id-24 p.bus span {
+   display: inline-block;
+   color: #fff;
+   margin: 0 2px;
+   padding: 0;
+   background-color: red;
+   border-radius: 50%;
+   border: 1px solid red;
+   font-weight: bold;
+   width: 26px;
+   height: 26px;
+   line-height: 26px;
+   text-align: center;
+}
+
+body.page-id-24 #formularios {
+	position: relative;
+	z-index: 102;
+}
+
+body.page-id-24 #formularios .row-bg-wrap {
+	pointer-events: none;
+}
+
+body.page-id-24 #formularios .row_col_wrap_12 {
+	pointer-events: auto;
+}
+
+
+/*******************************************************************************************************
+========================================================================================================
+  Media Queries
+========================================================================================================
+********************************************************************************************************/
+@media only screen and (min-width: 1600px) {
+	body.home .container {
+	  max-width: 1580px;
+	  margin: 0 auto;
+	}
 }
