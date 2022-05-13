@@ -295,7 +295,9 @@ body.single-portfolio .container.main-content .post-area.span_9 #portfolio-extra
  */
 
 body.page-id-21 .portfolio-wrap .portfolio-items .work-item {
-	max-height: 287px;
+	max-height: 90%;
+	max-width: 90%;
+	margin: 5%;
 	overflow: hidden;
 }
 body.page-id-21 .portfolio-wrap .portfolio-items .work-item img {
@@ -323,10 +325,6 @@ body.page-id-21 .container-wrap .portfolio-filters-inline ul li {
 }
 
 
-body.page-id-21 .container-wrap .portfolio-items {
-	max-height: 320px;
-	overflow: hidden;
-} 
 body.page-id-21 .container-wrap .portfolio-items .col.span_3:not(.destacados):nth-child(5):last-child {
 	display: none;
 }
@@ -404,8 +402,8 @@ body.page-id-21 .ai1ec-agenda-view {
 
 
 body.page-id-21 .ai1ec-agenda-view .ai1ec-date {
-	flex: 0 0 33%;
-	max-width: 32.2%;
+	flex: 0 0 100%;
+	max-width: 100%;
 	align-self: flex-start;
 	background: none;
 	padding: 0;
@@ -446,7 +444,6 @@ body.page-id-21 .ai1ec-agenda-view .ai1ec-date .ai1ec-event {
 /* header*/
 body.page-id-21 .ai1ec-agenda-view .ai1ec-date .ai1ec-event-header {
 	cursor: pointer;
-	min-height: 350px;
 	pointer-events: none;
 }
 
@@ -572,7 +569,17 @@ body.page-id-24 .tabbed > ul.wpb_tabs_nav  li:last-child {
 
 body.page-id-24 .tabbed > ul.wpb_tabs_nav  li a {
 	background-color: #fff;
-	border-color: #fff;
+	border-color: #fff;	
+	font-size: 1.6rem;
+	font-weight: bold;
+	margin-bottom: 1rem;
+}
+
+body.page-id-24 .tabbed[data-color-scheme="accent-color"][data-style="default"] li:not(.cta-button) .active-tab,
+body.page-id-24 .tabbed > ul.wpb_tabs_nav  li a.active-tab  {
+  background-color: transparent;
+  border-color: transparent;
+  color: #666;
 }
 
 body.page-id-24 .tabbed ul.wpb_tabs_nav li:first-child a,
@@ -588,32 +595,29 @@ body.page-id-24 .tabbed ul.wpb_tabs_nav li:first-child a:not(.active-tab) {
 	z-index: 105;
 	width: 100vw;
 	display: block;
-	height: 60vh;
+	height: calc(100vh - 200px);
 	bottom: 0;
 	left: 0;
+	top: 200px;
 }
 
-body.page-id-24 div[id^="tab-"],
-body.page-id-24 #tab-tab.visible-tab {
-	height: 80vh;
+body.page-id-24 #como-llegar {
+	z-index: 1!important;
 }
 
-body.page-id-24 #tab-tab.visible-tab #mapa {
-	height: 400px;
+body.page-id-24 #tab-tab {
+	height: 700px;
+	background-color: #fff;
 }
 
-
-body.page-id-24 #tab-que-te-interesa-hacer-en-mercado-de-tapineria.visible-tab {
-	height: 100px !important;
-}
-
-body.page-id-24 #tab-que-te-interesa-hacer-en-mercado-de-tapineria.visible-tab .divider {
-	width: 100vw;
+body.page-id-24 #formularios {
 	position: absolute;
-	z-index: 101;
-	background-color: rgba(255,255,255,.6);
-	margin-left: -29vw;
-	/*height: 600px !important;*/
+	z-index: -1!important;
+	top: 135px;
+}
+
+body.page-id-24 #tab-tab #direccion {
+	margin-bottom: .5em;
 }
 
 /* buses */
@@ -622,9 +626,9 @@ body.page-id-24 p.bus span {
    color: #fff;
    margin: 0 2px;
    padding: 0;
-   background-color: red;
+   background-color: #C1272D;
    border-radius: 50%;
-   border: 1px solid red;
+   border: 1px solid #C1272D;
    font-weight: bold;
    width: 26px;
    height: 26px;
@@ -632,10 +636,11 @@ body.page-id-24 p.bus span {
    text-align: center;
 }
 
-body.page-id-24 #formularios {
-	position: relative;
-	z-index: 102;
+/* mapa */
+body.page-id-24 #tab-tab.visible-tab #mapa {
+	height: 400px;
 }
+
 
 body.page-id-24 #formularios .row-bg-wrap {
 	pointer-events: none;
@@ -646,14 +651,426 @@ body.page-id-24 #formularios .row_col_wrap_12 {
 }
 
 
-/*******************************************************************************************************
-========================================================================================================
-  Media Queries
-========================================================================================================
-********************************************************************************************************/
-@media only screen and (min-width: 1600px) {
+body.page-id-24 .toggles.accordion .toggle.open h3 a {
+	background-color: #ddd;
+	color: #000;
+}
+
+body.page-id-24  .toggle > div {
+  box-shadow: 0 1px 2px rgba(0,0,0,0);
+}
+
+body.page-id-24 .toggles.accordion,
+body.page-id-24 .toggle[data-inner-wrap="true"].open,
+body.page-id-24 .toggle[data-inner-wrap="true"].open > div {
+  pointer-events: none;
+}
+
+body.page-id-24 .toggles.accordion .inner-toggle-wrap .wpcf7 {
+	font-size: 0.9rem;
+	line-height: 130%;
+	margin: 3vh 0;
+	padding: 0 10%
+}
+
+body.page-id-24 .toggles.accordion .inner-toggle-wrap .wpcf7 form {
+	pointer-events: auto;
+}
+
+body.page-id-24 .toggles.accordion .inner-toggle-wrap .wpcf7 .screen-reader-response[role="alert"] {
+    position: relative;
+    overflow: visible;
+    clip: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+	font-size: 1rem;
+	text-align: center;
+	line-height: 130%;
+	width: 80vw;
+    /*! opacity: 0; */
+    height: auto;
+	padding: 1rem 10%;
+	text-align: left;
+	box-sizing: border-box;
+	margin-bottom: 2rem;
+	border: 3px solid #666;
+}
+
+body.page-id-24 .toggles.accordion .inner-toggle-wrap .wpcf7 .screen-reader-response ul li {
+	font-size: 1rem;
+	line-height: 130%;
+	margin-left: 2rem;
+}
+
+body.page-id-24 .toggles.accordion .inner-toggle-wrap  .wpcf7-form div.wpcf7-response-output {
+    padding: 1rem 2em !important;
+    margin: 1rem 0 0 0 !important;
+    top: 0px;
+    background-color: rgba(255,255,255,0);
+}
+
+body.page-id-24 .toggles.accordion .inner-toggle-wrap  .wpcf7-form span.wpcf7-not-valid-tip {
+    /*border: 1px solid red !important;*/
+    padding: 0 !important;
+	margin: 0 2rem 1rem 0;
+	display: block!important;
+}
+
+body.page-id-24 .toggles.accordion .inner-toggle-wrap .wpcf7 .screen-reader-response[role="alert"] ~ form {
+    opacity: 0.7;
+}
+
+@media (min-width: 1024px) {
+
+	body.page-id-24 .toggles.accordion .inner-toggle-wrap  .wpcf7 form .row .span6 {
+		width: 49%;
+		margin: 0;
+		float: left;
+	}
+
+	body.page-id-24 .toggles.accordion .inner-toggle-wrap  .wpcf7 form .row .span6:first-child {
+		margin-right: 1%;
+	}
+}
+
+
+body.page-id-24 .toggles.accordion .inner-toggle-wrap .wpcf7 form .row .span6 label span {
+    color: #333;
+}
+
+body.page-id-24 .toggles.accordion .inner-toggle-wrap .wpcf7 form .row .span6 input[type="text"],
+body.page-id-24 .toggles.accordion .inner-toggle-wrap .wpcf7 form .row .span6 input[type="tel"],
+body.page-id-24 .toggles.accordion .inner-toggle-wrap .wpcf7 form .row .span6 input[type="email"],
+body.page-id-24 .toggles.accordion .inner-toggle-wrap .wpcf7 form .row .span6 textarea,
+body.page-id-24 .toggles.accordion .inner-toggle-wrap .wpcf7 form .row .span6 .wpcf7-form-control.wpcf7-submit {
+    padding: 0.8em 0.5em;
+	border: 0.025pt solid #333;
+	background-color: #A8DADC;
+	border-radius: 0;
+}
+
+body.page-id-24 .toggles.accordion .inner-toggle-wrap .wpcf7 form .row .span6 .wpcf7-form-control.wpcf7-submit {
+	border-radius: 0 !important;
+	margin: 20px 0;
+	width: 100%;
+	background-color: #67B5AF;
+}
+
+@media (min-width: 1024px) {
+body.page-id-24 .toggles.accordion .inner-toggle-wrap .wpcf7 form .row .span6 input[type="text"],
+body.page-id-24 .toggles.accordion .inner-toggle-wrap .wpcf7 form .row .span6 input[type="tel"],
+body.page-id-24 .toggles.accordion .inner-toggle-wrap .wpcf7 form .row .span6 input[type="email"],
+body.page-id-24 .toggles.accordion .inner-toggle-wrap .wpcf7 form .row .span6 textarea,
+body.page-id-24 .toggles.accordion .inner-toggle-wrap .wpcf7 form .row .span6 .wpcf7-form-control.wpcf7-submit {
+		padding: 0.8em 2em;
+	}
+}
+
+body.page-id-24 .toggles.accordion .inner-toggle-wrap .wpcf7 form select::placeholder,
+body.page-id-24 .toggles.accordion .inner-toggle-wrap .wpcf7 form textarea::placeholder,
+body.page-id-24 .toggles.accordion .inner-toggle-wrap .wpcf7 form input[type="text"]::placeholder,
+body.page-id-24 .toggles.accordion .inner-toggle-wrap .wpcf7 form input[type="password"]::placeholder,
+body.page-id-24 .toggles.accordion .inner-toggle-wrap .wpcf7 form input[type="datetime"]::placeholder,
+body.page-id-24 .toggles.accordion .inner-toggle-wrap .wpcf7 form input[type="datetime-local"]::placeholder,
+body.page-id-24 .toggles.accordion .inner-toggle-wrap .wpcf7 form input[type="date"]::placeholder,
+body.page-id-24 .toggles.accordion .inner-toggle-wrap .wpcf7 form input[type="month"]::placeholder,
+body.page-id-24 .toggles.accordion .inner-toggle-wrap .wpcf7 form input[type="time"]::placeholder,
+body.page-id-24 .toggles.accordion .inner-toggle-wrap .wpcf7 form input[type="week"]::placeholder,
+body.page-id-24 .toggles.accordion .inner-toggle-wrap .wpcf7 form input[type="number"]::placeholder,
+body.page-id-24 .toggles.accordion .inner-toggle-wrap .wpcf7 form input[type="email"]::placeholder,
+body.page-id-24 .toggles.accordion .inner-toggle-wrap .wpcf7 form input[type="url"]::placeholder,
+body.page-id-24 .toggles.accordion .inner-toggle-wrap .wpcf7 form input[type="search"]::placeholder,
+body.page-id-24 .toggles.accordion .inner-toggle-wrap .wpcf7 form input[type="tel"]::placeholder,
+body.page-id-24 .toggles.accordion .inner-toggle-wrap .wpcf7 form input[type="color"]::placeholder,
+body.page-id-24 .toggles.accordion .inner-toggle-wrap .wpcf7 form .uneditable-input::placeholder {
+    color: #000;
+	font-size: 1em;
+}
+
+body.page-id-24 .toggles.accordion .inner-toggle-wrap .wpcf7 form form label {
+	line-height: 100%;
+
+}
+
+body.page-id-24 .toggles.accordion .inner-toggle-wrap .wpcf7 form .row .span6 .wpcf7-form-control.wpcf7-submit {
+    text-align: center;
+    background-image: none;
+    font-size: 140%;
+	line-height: 100%;
+	margin-top: 25px;
+	padding: 0.72em 2em;
+}
+
+body.page-id-24 .toggles.accordion .inner-toggle-wrap .wpcf7 form .span6 .lopdblock {
+	font-size: 90%;
+}
+
+body.page-id-24 .toggles.accordion .inner-toggle-wrap .wpcf7 form .span6 .lopdblock,
+body.page-id-24 .toggles.accordion .inner-toggle-wrap .wpcf7 form .span6 .lopdblock a {
+	color: #66;
+	text-align: left;
+
+}
+
+
+
+/*****************************************************************************************************
+======================================================================================================
+	Media queries
+======================================================================================================
+******************************************************************************************************/
+/**********************************************************************************************
+	+320px (Galaxy Note)
+***********************************************************************************************/
+@media only screen and (max-width: 360px){
+	
+	
+	
+}
+/**********************************************************************************************
+	+360px (Galaxy Note)
+***********************************************************************************************/
+
+/**********************************************************************************************
+	+375px (iPhone 6)
+***********************************************************************************************/
+/**********************************************************************************************
+	+414px (iPhone 6 Plus / Galaxy Note)
+***********************************************************************************************/
+@media only screen and (min-width: 414px){
+	
+	body .container {
+		max-width: 330px;
+	}
+}
+/**********************************************************************************************
+	+568px (iPhone 5 horizontal)
+***********************************************************************************************/
+@media only screen and (min-width: 568px){
+	
+	body .container {
+		max-width: 490px;
+	}
+}
+
+/**********************************************************************************************
+	+660px (Galaxy horizontal)
+***********************************************************************************************/
+@media only screen and (min-width: 660px){
+	
+	body .container {
+		max-width: 600px;
+	}
+	
+	
+	body.page-id-21 .portfolio-items:not(.carousel) .col.span_3 {
+		width: 50%;
+	}
+	
+	body.page-id-21 .ai1ec-agenda-view .ai1ec-date {
+		flex: 0 0 50%;
+		max-width: 48.2%;
+	}
+	
+	
+}
+
+/**********************************************************************************************
+	+667px (iPhone 6 horizontal)
+***********************************************************************************************/
+@media only screen and (min-width: 667px){
+
+}
+
+/**********************************************************************************************
+	+736px (iPhone 6 Plus horizontal)
+***********************************************************************************************/
+
+@media only screen and (min-width: 736px){
+	
+	body .container {
+		max-width: 660px;
+	}
+
+}
+
+/**********************************************************************************************
+	+740px (Galaxy S9 horizontal)
+***********************************************************************************************/
+
+@media only screen and (min-width: 740px){
+
+}
+
+/**********************************************************************************************
+	+768px (iPad vertical)
+***********************************************************************************************/
+
+/**********************************************************************************************
+	+812px (iPhoneX horizontal)
+***********************************************************************************************/
+@media only screen and (min-width: 812px){
+}
+/**********************************************************************************************
+	+834px (iPad Pro vertical)
+***********************************************************************************************/
+@media only screen and (min-width: 834px){
+}
+
+/**********************************************************************************************
+	+846px (Galaxy Note horizontal)
+***********************************************************************************************/
+@media only screen and (min-width: 846px){
+}
+/**********************************************************************************************
+	+896px (iPhone XR horizontal)
+***********************************************************************************************/
+@media only screen and (min-width: 896px){
+}
+/**********************************************************************************************
+	+992px
+***********************************************************************************************/
+
+@media only screen and (min-width: 992px){
+	
+	body .container {
+		max-width: 900px;
+	}
+	
+	body.page-id-21 .portfolio-items:not(.carousel) .col.span_3 {
+		width: 24.5%!important;
+	}
+	
+	body.page-id-21 .ai1ec-agenda-view .ai1ec-date {
+		flex: 0 0 33%;
+		max-width: 31.9%;
+	}
+	/*
+	body.page-id-21 .container-wrap .portfolio-items {
+		max-height: 320px;
+		overflow: hidden;
+	} 
+
+	body.page-id-21 .portfolio-wrap .portfolio-items .work-item {
+	  max-height: 287px;
+	}
+*/
+	
+}
+
+/**********************************************************************************************
+	+1024px (iPad Horizontal / iPad Pro 12" Vertical)
+***********************************************************************************************/
+
+@media screen and (min-width: 1024px) {
+	
+	body .container {
+		max-width: none;
+	}
+	
+	
+	
+}
+/**********************************************************************************************
+	+1112px (iPad Pro 10" Horizontal)
+***********************************************************************************************/
+
+@media screen and ( min-width: 1112px ) {
+	
+	
+	
+	
+}
+
+/**********************************************************************************************
+	+1152px
+***********************************************************************************************/
+
+@media screen and ( min-width: 1152px ) {
+	
+	
+	
+	
+}
+
+/**********************************************************************************************
+	+1200px
+***********************************************************************************************/
+@media only screen and (min-width: 1200px) and (max-width: 1265px){
+	
+	
+}
+/**********************************************************************************************
+	+1270px
+***********************************************************************************************/
+@media only screen and (min-width: 1270px){
+	
+	
+	
+	
+}
+
+/**********************************************************************************************
+	+1360px (iPad Pro 12" horizontal)
+***********************************************************************************************/
+
+@media screen and (min-width: 1360px) {
+	
+	
+}
+
+/**********************************************************************************************
+	+1400px
+***********************************************************************************************/
+
+@media screen and ( min-width: 1400px ) {
+	
+}
+
+/**********************************************************************************************
+	+1440px
+***********************************************************************************************/
+
+@media screen and ( min-width: 1440px ) {
+	
+	
+	
+}
+
+/**********************************************************************************************
+	+1600px
+***********************************************************************************************/
+
+@media screen and ( min-width: 1600px ) {
+	
 	body.home .container {
 	  max-width: 1580px;
 	  margin: 0 auto;
 	}
+	
+	body.page-id-21 .portfolio-items:not(.carousel) .col.span_3 {
+		width: 25%!important;
+	}
+	
+	body.page-id-21 .ai1ec-agenda-view .ai1ec-date {
+		flex: 0 0 25%;
+		max-width: 23.9%;
+	}
+	
+	body.page-id-22 .full-width-content .post-area .masonry-blog-item,
+	body.page-id-22 .post-area.full-width-content .masonry-blog-item {
+		width: 23%;
+	}
+	
+}
+
+
+/**********************************************************************************************
+	+1920px
+***********************************************************************************************/
+
+@media only screen and (min-width: 1920px){
+	
+	
 }
